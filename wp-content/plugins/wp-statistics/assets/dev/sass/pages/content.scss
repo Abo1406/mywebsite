@@ -1,0 +1,145 @@
+.wps-content-analytics {
+  .wps-card {
+
+    .wps-content-category {
+      margin-bottom: 0!important;
+    }
+
+  }
+
+  #performance-chart, #performance-chart-single {
+    height: 299px !important;
+    width: 100% !important;
+    margin-top: 24px;
+  }
+
+
+
+
+  td .wps-ellipsis-parent {
+    max-width: 250px;
+  }
+
+  .wps-ellipsis-parent {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .wps-ellipsis-text {
+      display: table-cell;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  &-header {
+    display: flex;
+    gap: 12px;
+    margin-top: -10px;
+    &__title{
+      h2{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #0C0C0D;
+
+      }
+      a{
+        margin-left: 8px;
+        .rtl &{
+          margin-left: unset;
+          margin-right: 8px;
+        }
+      }
+    }
+
+
+    @media(max-width: 500px){
+      flex-direction: column;
+
+      .wps_title{
+        font-size: 1.4em;
+      }
+    }
+
+    img ,div>svg {
+      width: 77px;
+      height: 80px;
+      border-radius: 8px;
+    }
+
+    &__info {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 6px;
+      margin-top: 8px;
+      @media(max-width: 450px){
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .wps-content-analytics-header__type {
+        padding: 4px 8px;
+        gap: 10px;
+        border-radius: 4px;
+        background: #1961401A;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.41px;
+        color: #196140;
+      }
+
+      .wps-content-analytics-header__date {
+        &_published, &_updated{
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16.41px;
+          color: #363739;
+          padding-right: 12px;
+          padding-left: 12px;
+          border-right: 1px solid #EEEFF1;
+          border-left: 1px solid #EEEFF1;
+
+          @media(max-width: 450px){
+            border:0!important;
+            padding: 0!important;
+          }
+        }
+        &_updated{
+          border-left: 0;
+          padding-left: 0;
+          span{
+            color:#56585A
+          }
+        }
+
+      }
+
+      .wps-content-analytics-header__author a {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+        color: #56585A;
+        text-decoration: underline;
+        &:hover{
+          color: #404bf2;
+        }
+      }
+    }
+
+    &__tags {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+
+      a {
+        padding: 4px 8px;
+        background: #404BF21A;
+        border-radius: 4px;
+      }
+    }
+  }
+}

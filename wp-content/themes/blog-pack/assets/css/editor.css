@@ -1,0 +1,46 @@
+/**
+ * This file contains styles for the editor.
+ *
+ *
+ */
+
+/*
+ * Initialization of Page template.
+ */
+.editor-styles-wrapper .block-editor-block-list__layout>p {
+    max-width: var(--wp--style--global--content-size);
+}
+
+header .is-position-sticky {
+    background-color: rgba(245, 245, 245, 0.387);
+}
+
+header.is-selected .is-position-sticky,
+header.has-child-selected .is-position-sticky {
+    background-color: rgb(128 128 128 / 13%);
+}
+
+/* header:hover {
+    background-color: rgb(255, 255, 255);
+} */
+
+/* editor padding */
+.edit-post-visual-editor .is-root-container.wp-block-post-content:not(.has-global-padding) {
+    padding-right: var(--wp--style--root--padding-right);
+    padding-left: var(--wp--style--root--padding-left);
+}
+
+/*
+ * wpforms.
+ */
+.blog-pack-subscription-form fieldset {
+    display: flex;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    gap: 20px;
+}
+
+.blog-pack-contact-form input[type="text"],
+.blog-pack-contact-form input[type="email"] {
+    height: 54px !important;
+}

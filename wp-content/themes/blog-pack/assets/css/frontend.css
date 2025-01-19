@@ -1,0 +1,192 @@
+/**
+ * This file contains styles for the editor and frontend
+ *
+ *
+ */
+
+/*
+* Core blocks customization.
+*/
+/* block: "core/navigation" */
+@media (max-width: 767.5px) {
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: block;
+    }
+
+    .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content {
+        display: none;
+    }
+
+    .wp-block-navigation__responsive-container-close {
+        right: 1.7rem;
+        top: 2rem;
+    }
+
+    .has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog,
+    .has-modal-open .is-menu-open .wp-block-navigation__responsive-dialog {
+        padding-top: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    /* Sub menu */
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item.has-child {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item.has-child .wp-block-navigation__submenu-icon {
+        display: block;
+        top: 6px;
+        position: absolute;
+        right: -20px;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item.has-child .wp-block-navigation__submenu-container {
+        display: none;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container li {
+        margin-bottom: 20px;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+        min-width: unset !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 767.5px) and (min-width: 600px) {
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
+    }
+}
+
+/* Header */
+.mx_clean_header_background {
+    background: unset !important;
+}
+
+body header.wp-block-template-part:has(+ div .wp-block-cover:first-child) .is-style-header-fixed,
+body header.wp-block-template-part:has(+ .wp-block-cover) .is-style-header-fixed,
+body header.wp-block-template-part:has(+ main .wp-block-cover) .is-style-header-fixed {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+body header.wp-block-template-part:has(+ div .wp-block-cover:first-child) .is-position-sticky,
+body header.wp-block-template-part:has(+ .wp-block-cover) .is-position-sticky,
+body header.wp-block-template-part:has(+ main .wp-block-cover) .is-position-sticky {
+    position: absolute;
+    width: 100%;
+}
+
+@media (min-width: 767.5px) {
+
+    body header.wp-block-template-part:has(+ div .wp-block-cover:first-child) .is-position-sticky,
+    body header.wp-block-template-part:has(+ .wp-block-cover) .is-position-sticky,
+    body header.wp-block-template-part:has(+ main .wp-block-cover) .is-position-sticky {
+        position: fixed;
+        width: 100%;
+    }
+}
+
+.wp-site-blocks>*+* {
+    margin-block-start: 0 !important;
+}
+
+:where(.wp-site-blocks *:focus) {
+    outline-width: 2px;
+    outline-style: solid
+}
+
+:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)),
+:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)),
+:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content),
+:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content) {
+    padding: 0.7em 1.5em;
+}
+
+.wp-block-navigation .has-child .wp-block-navigation-submenu__toggle[aria-expanded=true]~.wp-block-navigation__submenu-container,
+.wp-block-navigation .has-child:not(.open-on-click):hover>.wp-block-navigation__submenu-container,
+.wp-block-navigation .has-child:not(.open-on-click):not(.open-on-hover-click):focus-within>.wp-block-navigation__submenu-container {
+    min-width: 250px;
+
+}
+
+.wpforms-container.inline-fields #wpforms-form-294 .wpforms-field-container .wpforms-field {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+        border-bottom: 0px;
+    }
+
+    .wp-block-navigation-submenu ul li {
+        border-bottom: 1px solid var(--wp--preset--color--light);
+    }
+
+}
+
+.wp-block-navigation-item__content:hover {
+    opacity: 0.7;
+}
+
+.blog-pack-subscription-form .wpforms-submit-container button[type="submit"]:hover,
+.blog-pack-contact-form .wpforms-submit-container button[type="submit"]:hover {
+    background: var(--wp--preset--color--bold) !important;
+}
+
+@media (max-width: 781px) {
+    .blog-pack-footer .wp-block-site-title {
+        text-align: center;
+    }
+
+    .blog-pack-footer .wp-block-social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .blog-pack-subscription-form form .wpforms-field-container>div,
+    .blog-pack-contact-form form .wpforms-field-container>div {
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-pack-subscription-form form {
+        flex-direction: column;
+        justify-self: center;
+        gap: 5px;
+    }
+
+    .blog-pack-contact-form em.wpforms-error,
+    .blog-pack-subscription-form em.wpforms-error {
+        margin-top: 5px !important;
+    }
+
+    .blog-pack-subscription-form form .wpforms-field-container,
+    .blog-pack-subscription-form form .wpforms-submit-container {
+        width: 100% !important;
+    }
+
+    .blog-pack-subscription-form .wpforms-error {
+        position: relative !important;
+    }
+}
+
+/* Quotes */
+.blog-review-section .has-news-cycle-bold-font-family {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}

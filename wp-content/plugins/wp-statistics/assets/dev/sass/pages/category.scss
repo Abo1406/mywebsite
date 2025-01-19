@@ -1,0 +1,25 @@
+.wps-category-analytics {
+
+  #performance-category-chart, #performance-category-chart-single {
+    height: 299px !important;
+    width: 100% !important;
+    margin-top: 24px;
+  }
+
+  td .wps-ellipsis-parent {
+    max-width: 250px;
+  }
+
+  .wps-ellipsis-parent {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .wps-ellipsis-text {
+      display: table-cell;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
